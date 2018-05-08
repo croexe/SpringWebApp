@@ -17,7 +17,8 @@ public class DiDemoApplication {
        MyController controller = (MyController) ctx.getBean("myController");
         controller.hello();
 
+        System.out.println(controller.hello());
         System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
-        System.out.println(ctx.getBean(PrimarySpanishGreetingService.class).sayGreeting());
+
     }
 }
