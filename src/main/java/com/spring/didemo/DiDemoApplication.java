@@ -2,6 +2,7 @@ package com.spring.didemo;
 
 import com.spring.didemo.controllers.MyController;
 import com.spring.didemo.controllers.PropertyInjectedController;
+import com.spring.didemo.services.PrimarySpanishGreetingService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -17,5 +18,6 @@ public class DiDemoApplication {
         controller.hello();
 
         System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
+        System.out.println(ctx.getBean(PrimarySpanishGreetingService.class).sayGreeting());
     }
 }
