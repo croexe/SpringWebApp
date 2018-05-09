@@ -3,6 +3,7 @@ package com.spring.didemo.controllers;
 import com.spring.didemo.services.GreetingService;
 import com.spring.didemo.services.GreetingServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Controller;
 public class PropertyInjectedController {
 
     @Autowired
+    @Qualifier("greetingServiceImpl")
     public GreetingServiceImpl greetingService;
 
     public String sayHello(){
